@@ -44,6 +44,10 @@ int main()
   //  printf("query: ");
     fprintf(stdout,"query: ");
     fgets(query,50,stdin);
+    char *p = strchr(query, '\n');
+    if (p != NULL) *p = 0;
+    p = strchr(query, '\r');
+    if (p != NULL)  *p = 0;
     for (int i = 0 ; i < row_count; i++)
     if(strcmp(row[i].title,query) == 0) puts (row[i].mfg);
     return 0;
