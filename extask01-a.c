@@ -8,7 +8,11 @@ struct element
 {
     char word[max_word];
     int count;
+<<<<<<< HEAD
     struct element *next; 
+=======
+    struct element *next;
+>>>>>>> 31b44ae423a02923eef585c22575fc854aeae6b6
 };
 
 struct element *first = NULL;
@@ -26,10 +30,10 @@ struct element *find(char word[max_word])
 
 struct element *add()
 {
-    struct element *mem = (struct element *) malloc(sizeof(struct element));
-    mem->next = first;
-    first = mem;
-    return mem;
+    struct element *memb = (struct element *) malloc(sizeof(struct element));
+    memb->next = first;
+    first = memb;
+    return memb;
 }
 
 int main()
