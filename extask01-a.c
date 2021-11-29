@@ -8,7 +8,7 @@ struct element
 {
     char word[max_word];
     int count;
-    struct element *next; // указатель на эту же структуру где-то в памяти
+    struct element *next; 
 };
 
 struct element *first = NULL;
