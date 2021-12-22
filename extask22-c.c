@@ -64,3 +64,48 @@ int main()
 
     return 0;
 }
+int main()
+{  
+    int choice1;
+    do
+    {
+        printf("1 - write data to binary file auto\n");
+        printf("2 - write data to binary file from the keyboard\n");
+        printf("choice: "); 
+        scanf("%d", &choice1);
+        switch (choice1)
+        {
+            case 1: input_row_auto(); break;
+            case 2: input_row_k(); break;
+        }
+    }
+    while (choice1 != 1 && choice1 != 2);
+    
+    struct table_row row[row_count];
+
+    if (choice1 == 1) write_bi_auto(row);
+    if (choice1 == 2) write_bi_keyboard(row); 
+
+    int choice;
+    do
+    {
+        printf("0 - exit\n");        
+        printf("1 - read from binary file\n");
+        printf("2 - write data to txt file\n");
+        printf("3 - show table contents\n");
+        printf("4 - query\n");
+        printf("choice: ");        
+        scanf("%d", &choice);
+        switch (choice)
+        {
+            case 1: read_b(row); break;
+            case 2: write_txt(row); break;
+            case 3: show_table(row); break;
+            case 4: query(row); break;
+        }
+        printf("\n");
+    }
+    while (choice != 0);
+    
+    return 0;
+}

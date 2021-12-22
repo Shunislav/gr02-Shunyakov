@@ -1,5 +1,5 @@
-#include <stdio.h> // FILE, fopen(), fclose(), fgets()
-#include <string.h> // strlen(), strcpy()
+#include <stdio.h> 
+#include <string.h> 
 
 #define max_txt 256
 
